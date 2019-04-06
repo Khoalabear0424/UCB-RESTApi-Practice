@@ -1,10 +1,10 @@
-
+var methodOverride = require('method-override')
 // https://www.npmjs.com/package/body-parser
 var bodyParser = require('body-parser')
 var express = require('express');
 var app = express();
 
-
+app.use(methodOverride('_method'))
 app.use(express.static("public"));
 
 //integrate body-parser with express
